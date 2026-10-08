@@ -33,19 +33,19 @@ func main() {
 	x1 := 10
 	y1 := 20
 	swap(&x1, &y1)
-	fmt.Println("x1:", x1)
-	fmt.Println("y1:", y1)
+	fmt.Println("x1:", x1) // Output: 20
+	fmt.Println("y1:", y1) // Output: 10
 
 	p1 := Point{X: 1, Y: 2}
-	fmt.Println("Before:", p1)
+	fmt.Println("Before:", p1) // Output: {1 2}
 	updatePoint(&p1)
-	fmt.Println("After:", p1)
+	fmt.Println("After:", p1) // Output: {100 200}
 
 	num := 10
 	increment(&num)
-	fmt.Println("Incremented:", num)
+	fmt.Println("Incremented:", num) // Output: 11
 
-	printAddresses()
+	printAddresses() // Output: Address of x: 0xc0000140b0 (example address)
 }
 
 func update(x int) {
