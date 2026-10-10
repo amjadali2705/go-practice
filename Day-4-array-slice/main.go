@@ -29,37 +29,37 @@ func main() {
 	fmt.Println(cap(s4)) // 5
 
 	arr3 := [5]int{1, 2, 3, 4, 5}
-	s5 := arr3[1:4]
-	s6 := arr3[2:5]
+	s5 := arr3[1:4] // [2,3,4]
+	s6 := arr3[2:5] // [3,4,5]
 	s5[1] = 100
 	fmt.Println(s5)   // [2, 100, 4]
 	fmt.Println(s6)   // [100, 4, 5]
 	fmt.Println(arr3) // [1, 2, 100, 4, 5]
 
 	arr4 := [5]int{1, 2, 3, 4, 5}
-	s7 := arr4[1:3]
-	s8 := append(s7, 100)
-	fmt.Println(arr4) // [1, 2, 3, 100, 5]
-	fmt.Println(s7)   // [2, 3]
-	fmt.Println(s8)   // [2, 3, 100]
+	s7 := arr4[1:3]       // [2,3]
+	s8 := append(s7, 100) // [2,3,100]
+	fmt.Println(arr4)     // [1, 2, 3, 100, 5]
+	fmt.Println(s7)       // [2, 3]
+	fmt.Println(s8)       // [2, 3, 100]
 
 	arr5 := [5]int{1, 2, 3, 4, 5}
-	s9 := arr5[1:3]
-	s10 := append(s9, 100)
-	s11 := append(s9, 200)
-	fmt.Println(arr5) // [1, 2, 3, 200, 5]
-	fmt.Println(s10)  // [2, 3, 200]
-	fmt.Println(s11)  // [2, 3, 200]
+	s9 := arr5[1:3]        // [2,3]
+	s10 := append(s9, 100) // [2,3,100]
+	s11 := append(s9, 200) // [2,3,200]
+	fmt.Println(arr5)      // [1, 2, 3, 200, 5]
+	fmt.Println(s10)       // [2, 3, 200]
+	fmt.Println(s11)       // [2, 3, 200]
 
 	arr6 := [5]int{1, 2, 3, 4, 5}
-	s12 := arr6[1:3]
-	s13 := append(s12, 100)
+	s12 := arr6[1:3]        // [2,3]
+	s13 := append(s12, 100) // [2,3,100]
 	arr6[3] = 999
 	fmt.Println(s13) // [2, 3, 999]
 
 	arr7 := [3]int{1, 2, 3}
-	s14 := arr7[:]
-	s15 := append(s14, 4)
+	s14 := arr7[:]        // [1,2,3]
+	s15 := append(s14, 4) // [1,2,3,4]
 	s15[0] = 100
 	fmt.Println(arr7) // [1, 2, 3]
 	fmt.Println(s14)  // [1, 2, 3]
