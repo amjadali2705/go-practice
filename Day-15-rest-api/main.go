@@ -51,6 +51,10 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /users/{id}", userHandler.GetUserByID)
 	mux.HandleFunc("GET /users", userHandler.GetAll)
+	mux.HandleFunc("POST /users", userHandler.Create)
+	mux.HandleFunc("PUT /users/{id}", userHandler.Update)
+	mux.HandleFunc("DELETE /users/{id}", userHandler.Delete)
+
 	// 7. Start HTTP server
 	server := &http.Server{
 		Addr:              ":8080",
